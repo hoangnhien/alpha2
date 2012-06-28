@@ -659,6 +659,127 @@ nav#site-navigation > ul > li.current-menu-item > a
 .hn-category-footer .pagination {
 	margin-right: 8px;
 }
+
+
+.hn-category-filter h1 {
+	font-family: 'Arial';
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 38px;
+	margin: 0;
+	padding: 0;
+	color: #0030ad;
+	border: none;
+}
+
+.product-detail {
+	padding: 15px 8px 30px;
+	width: 692px;
+	position: relative;
+}
+.hn-product-gallery,
+.hn-product-description {
+	width: 50%;
+	float: left;
+	position: relative;
+}
+.hn-product-description p {
+	font-family: 'Arial';
+	font-size: 13px;
+	color: #484747;
+	line-height: 20px;
+}
+.hn-product-description a {
+	margin: 10px 0;
+	display: block;
+	text-decoration: none;
+	padding-left: 56px;
+	width: 224px;
+	height: 50px;
+	font-family: 'Arial';
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 50px;
+	color: #fff;
+	background: url(images/booking-button.png);
+}
+.hn-product-intro-button,
+.hn-product-info-button {
+	border: solid 1px #dedede;
+	border-bottom: none;
+	height: 38px;
+	padding: 0 15px;
+	
+	font-family: 'Arial';
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 38px;
+	color: #484747;
+	background: #fff;
+}
+
+.hn-product-intro-button:hover,
+.hn-product-info-button:hover,
+.hn-product-intro-button.active,
+.hn-product-info-button.active
+ {
+	background: #dedede;
+	color: #979797;
+}
+
+.hn-product-intro,
+.hn-product-info {
+	border-top: solid 1px #dedede;
+	padding: 10px 0;
+	
+	font-family: 'Arial';
+	font-size: 11px;
+	line-height: 16px;
+	color: #484747;
+}
+
+/************************************************/
+.product-related {
+	position: relative;
+	width: 692px;
+	margin: 0 8px;
+	padding: 0 0 20px;
+}
+.section-title {
+	height: 40px;
+	border-bottom: solid 1px #dedede;
+	margin-bottom: 10px;
+}
+.section-title h1 {
+	font-family: 'Arial';
+	font-size: 13px;
+	font-weight: 700;
+	color: #002b9d;
+	margin: 0;
+	padding: 0;
+	line-height: 40px;
+	border: none;
+}
+.hn-product-item-short {
+	width: 230px;
+	float: left;
+	text-align: center;
+}
+.hn-product-item-short h1 {
+	border: none;
+	font-family: 'Arial';
+	font-size: 11px;
+	color: #000;
+	font-weight: 700;
+}
+.hn-product-item-short p a {
+	font-family: 'Arial';
+	font-size: 11px;
+	color: #ed1c24;
+	font-weight: 700;
+	
+}
+
 /************************************************/
 .hn-product-thumb {
 	width: 215px;
