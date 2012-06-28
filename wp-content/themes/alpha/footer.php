@@ -75,12 +75,6 @@
     s.parentNode.insertBefore(g,s)}(document,'script'));
   </script>
   
-  <!-- script for dynamic menu - HARRY -->
-  <script>
-  	jQuery(document).ready()
-  	
-  </script>
-  
   
   <!-- script for Thickbox -->
     <script type="text/javascript">
@@ -93,18 +87,7 @@
     var tb_closeImage = "<?php echo get_bloginfo('url').'/wp-includes/js/thickbox'; ?>/tb-close.png";
     }
     </script>
-  
-
-
-<!-- HARRY: script for slider -->
-<script type="text/javascript" src="<?php bloginfo('template_directory')?>/js/jquery.pikachoose.js"></script>
-		<script language="javascript">
-			$(document).ready(
-				function (){
-					$("#pikame").PikaChoose({carousel:true, showCaption:false,thumbOpacity:1});
-				});
-		</script>
-  
+    
 <?php wp_footer(); ?>
 </body>
 </html>
