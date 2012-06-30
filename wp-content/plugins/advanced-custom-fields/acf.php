@@ -1828,6 +1828,8 @@ class Acf
 	
 	function is_field_unlocked($field_name)
 	{
+		return true;
+		/*
 		switch ($field_name) {
 		    case 'repeater':
 		    	if(md5($this->get_license_key($field_name)) == "bbefed143f1ec106ff3a11437bd73432"){ return true; }else{ return false; }
@@ -1842,6 +1844,7 @@ class Acf
 		    	if(md5($this->get_license_key($field_name)) == "b6ecc9cd639f8f17d061b3eccad49b75"){ return true; }else{ return false; }
 		    	break;
 	    }
+	    */
 	}
 	
 	/*--------------------------------------------------------------------------------------

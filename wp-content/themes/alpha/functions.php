@@ -22,12 +22,12 @@ add_action( 'init', 'register_my_menus' );
 // register side bar
 
 register_sidebar( array(
-	'name' => __( 'Right Sidebar', 'hoangnhien' ),
-	'id' => 'right-sidebar',
+	'name' => __( 'Left Sidebar', 'hoangnhien' ),
+	'id' => 'left-sidebar',
 	'before_widget' => '',
 	'after_widget' => '',
-	'before_title' => '',
-	'after_title' => '',
+	'before_title' => '<p style="display:none">',
+	'after_title' => '</p>',
 ) );
 
 

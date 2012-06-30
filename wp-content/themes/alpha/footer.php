@@ -88,6 +88,26 @@
     }
     </script>
     
+    <!-- @author: HOANGNHIEN -->
+    <!-- script for product info tab -->
+    <script>
+    	$(document).ready(function(){
+			$(".hn-product-intro-button").click(function(){
+				$(".hn-tab").removeClass('active');
+				$(".hn-product-intro-button").addClass('active');
+				$(".hn-tab-content").hide();
+				$(".hn-product-intro").show();
+			});
+
+	    	$(".hn-product-info-button").click(function(){
+				$(".hn-tab").removeClass('active');
+				$(".hn-product-info-button").addClass('active');
+				$(".hn-tab-content").hide();
+				$(".hn-product-info").show();
+			});
+    	});
+    </script>
+    
 <?php wp_footer(); ?>
 </body>
 </html>
