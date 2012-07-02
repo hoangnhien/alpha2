@@ -47,8 +47,8 @@ Template Name: Products Template
 			<?php 
 			$catId = get_query_var('cat');
 			$total = _get_category_count($catId);
-			$iFirstLastLine = $total - (int)($total / 3);
-					
+			if($total <=3 ) $iFirstLastLine = 0;
+			else $iFirstLastLine = $total - (int)($total / 3);
 			?>
 			<?php $i = 0; ?>
 			<?php if(have_posts()): while(have_posts()): the_post();?>
@@ -63,15 +63,15 @@ Template Name: Products Template
 				
 				<?php  		
 				$thumb = "";	
-				if(get_field('images'))
-				{
-					while(the_repeater_field('images'))
-					{
-						$thumb = get_sub_field('image');
+				
+				$rows = get_field('images');
+				if($rows) {
+					foreach($rows as $row) {
+						$thumb = $row['image'];
 						break;
 					}
 				}
-					
+				
 				?>
 	 			<img src="<?php echo $thumb?>" alt="product-thumb" width="90" height="90" />
 				<p>
