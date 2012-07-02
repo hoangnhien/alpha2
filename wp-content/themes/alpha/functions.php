@@ -169,3 +169,19 @@ function get_page_id($pageSlug){
 
 }
 ?>
+<?php 
+function wp_get_postcount($id)
+{
+//return count of post in category child of ID 15
+$count = 0;
+$taxonomy = 'category';
+$args = array(
+  'child_of' => $id,
+);
+$tax_terms = get_terms($taxonomy,$args);
+foreach ($tax_terms as $tax_term) {
+$count +=$tax_term->count;
+}
+return $count;
+}
+?>

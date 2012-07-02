@@ -107,6 +107,26 @@
 			});
     	});
     </script>
+    <!-- @author: HOANGNHIEN -->
+    <!-- script for category widget -->
+    <script>
+    	$(document).ready(function(){
+			$('li.cat-item-19').hide();
+			$('li.cat-item').each(function(index, element) {
+				var sub = $(element).find('ul.children');
+				if(sub.size() > 0) {
+					$(element).find('>a').attr('href', 'javascript:void(0)');
+				}
+			});
+			$('li.cat-item ul.children').hide();
+			$('li.cat-item').click(function(){
+				$('li.cat-item ul.children').hide();
+				$('ul.children', this).show();
+			});
+        });
+    </script>
+    
+    
     
 <?php wp_footer(); ?>
 </body>

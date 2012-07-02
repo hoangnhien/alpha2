@@ -366,8 +366,7 @@ article > section > img {
 *******************************************************************************/
 
 div#container {
-    background: url(images/container-bg.jpg) top no-repeat;
-	position: relative;
+  position: relative;
     
 }
 
