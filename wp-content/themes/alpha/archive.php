@@ -54,13 +54,14 @@ Template Name: Products Template
 			$catId = get_query_var('cat');
 			$total = _get_category_count($catId);
 			if($total <=3 ) $iFirstLastLine = 0;
-			else $iFirstLastLine = $total - (int)($total / 3);
+			else $iFirstLastLine = ((int)($total / 3))*3 + 1;
+			
 			?>
-			<?php $i = 0; ?>
+			<?php $i = 1; ?>
 			<?php if(have_posts()): while(have_posts()): the_post();?>
 			<?php 
 				$sPositionClass = "";
-				if(($i % 3) == 2) $sPositionClass = " last-col";
+				if(($i % 3) == 0) $sPositionClass = " last-col";
 				if($i >= $iFirstLastLine) $sPositionClass = $sPositionClass . " last-line";
 				$i++;
 			?>	

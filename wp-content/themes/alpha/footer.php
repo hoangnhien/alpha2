@@ -9,13 +9,15 @@
             <section class="footer-level1">
             	
             	<section class="wraper">
-            		<a href="#" class="go-to-top">LÊN ĐẦU TRANG</a>
+            		<a href="javascript:void(0);" class="go-to-top" onclick="goToTop()">LÊN ĐẦU TRANG</a>
 	            	<div class="first-content">
 	            		<h2>Hỗ trợ khách hàng</h2>
-	            		<p>- Liên hệ với Alpha</p>
-						<p>- Quy định giao hàng & hoàn trả hàng</p>
-						<p>- Hướng dẫn chọn mua máy tính</p>
-						<p>- Thuật ngữ máy tính</p>
+	            		<ul>
+	            			<li><a href="javascript:void(0);">- Liên hệ với Alpha</a></li>
+							<li><a href="javascript:void(0);">- Quy định giao hàng & hoàn trả hàng</a></li>
+							<li><a href="javascript:void(0);">- Hướng dẫn chọn mua máy tính</a></li>
+							<li><a href="javascript:void(0);">- Thuật ngữ máy tính</a></li>
+						</ul>
 	            	</div>
 	            	<div>
 	            		<h2>Kết nối với chúng tôi</h2>
@@ -128,7 +130,14 @@
 			});
         });
     </script>
-    
+    <!-- @author: HOANGNHIEN -->
+    <!-- script for go to top button -->
+    <script>
+    	function goToTop() {
+    	  $("html, body").animate({ scrollTop: 0 }, "slow");
+    	  return false;
+    	};
+    </script>
     
     
 <?php wp_footer(); ?>

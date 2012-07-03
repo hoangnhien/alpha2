@@ -949,11 +949,20 @@ a.go-to-top:hover {
 	margin: 0;
 	padding: 0 0 10px 0;
 }
-.footer-level1 p {
+.footer-level1 p,
+.footer-level1 a {
 	font-family: 'Arial';
 	font-size: 12px;
 	line-height: 24px;
 	color: #9bb0e7;
+	text-decoration: none;
+}
+.footer-level1 ul {
+	margin: 0; padding: 0;
+}
+.footer-level1 ul li {
+	list-style: none;
+	margin: 0; padding: 0;
 }
 .footer-level1 img {
 	margin-top: 10px;
