@@ -260,21 +260,53 @@ body {
 }
 
 h1 {
-	font-family: 'Francois One', sans-serif;
+	font-family: 'Arial';
 	font-size: 28px;
+	line-height: 34px;
+	color: #484747;
+	margin: 0;
+	padding: 5px 0;	
 }
 h2 {
-	font-family: 'Francois One', sans-serif;
+	font-family: 'Arial';
 	font-size: 24px;
+	line-height: 28px;
+	color: #484747;
+	margin: 0;
+	padding: 5px 0;	
 }
 h3 {
-	font-family: 'Francois One', sans-serif;
+	font-family: 'Arial';
 	font-size: 20px;
+	line-height: 24px;
+	color: #484747;
+	margin: 0;
+	padding: 3px 0;	
 }
-h4 {}
-h5 {}
-h6 {}
-
+h4 {
+	font-family: 'Arial';
+	font-size: 18px;
+	line-height: 22px;
+	color: #484747;
+	margin: 0;
+	padding: 2px 0;	
+}
+h5 {
+	font-family: 'Arial';
+	font-size: 16px;
+	line-height: 22px;
+	color: #484747;
+	margin: 0;
+	padding: 2px 0;	
+}
+h6 {
+	font-family: 'Arial';
+	font-size: 14px;
+	line-height: 22px;
+	color: #484747;
+	margin: 0;
+	padding: 2px 0;	
+}
 p {
 	padding: 0;
 	margin: 0;
@@ -286,16 +318,34 @@ p {
 	position: relative;
    
 }
-
-.content-highlight {}
-
-.content-quote {
-	font-family: 'Verdana';
-	font-size: 12px;
-	color: #fff;
+.hn-page-content p {
+	padding: 5px 0;
 }
 
-.content-body {}
+.hn-content-highlight {
+	font-size: 15px;
+}
+
+.hn-content-smaller {
+	font-size: 11px;
+}
+
+.hn-page-content ul {
+	list-style: none;
+}
+.hn-page-content li {
+	background: url("images/icons/category-sub-list.png") no-repeat scroll left top transparent;
+    padding: 0 0 0 10px;
+}
+.hn-page-content a {
+	color: #002FAD;
+	text-decoration: none;
+}
+.hn-page-content a:hover {
+	color: #ED1C24;
+}
+
+
 
 .float-left {
 	float: left;
@@ -319,46 +369,14 @@ p {
 	@author: HoangNhien
 	Style for ARTICLE
 *******************************************************************************/
-
-article {
-	margin: 20px 0;
-}
-
-article > header {
-	padding: 10px 0;
-}
-
-article > header a,
-article > header {
-	text-decoration: none;
-	font-family: 'Arial';
-	font-size: 13px;
-	color: #242424;
-	font-weight: 700;
-}
-article > header > p {
-	font-family: 'Arial';
-	font-size: 11px;
-	color: #aeaeae;
-}
-
-article > header a:hover {
-	color: #eb4a93;
-}
-
-
-article > section {
-	font-family: 'Arial';
-	font-size: 13px;
-	color: #525252;
+.hn-page-content {
+	padding: 20px 10px 30px;
+	color: #484747;
+    font-family: 'Arial';
+    font-size: 13px;
+    text-decoration: none;
 	
 }
-
-article > section > img {
-	padding: 10px;
-	float: left;
-}
-
 
 /*******************************************************************************
 	@author: HoangNhien
@@ -477,7 +495,8 @@ div#banner {
 }
 
 nav#site-navigation > ul > li {
-	
+	background: url(images/icons/menu-list.png) left no-repeat;
+	padding: 0 26px 0 7px;
 	float: left;
 	
 }
@@ -493,12 +512,13 @@ nav#site-navigation > ul > li > a {
 	text-decoration: none;
 	color: #002fad;
 }
-
+nav#site-navigation > ul > li.active,
+nav#site-navigation > ul > li.current-menu-item {
+	background: url(images/icons/menu-list-active.png) left no-repeat;
+}
 nav#site-navigation > ul > li > a:hover,
 nav#site-navigation > ul > li.current-menu-item > a
-{
-	color: #ed1c24;
-	
+{	color: #ed1c24;
 }
 
 
@@ -953,7 +973,7 @@ a.go-to-top:hover {
 .footer-level1 a {
 	font-family: 'Arial';
 	font-size: 12px;
-	line-height: 24px;
+	line-height: 34px;
 	color: #9bb0e7;
 	text-decoration: none;
 }
@@ -961,6 +981,7 @@ a.go-to-top:hover {
 	margin: 0; padding: 0;
 }
 .footer-level1 ul li {
+	background: none;
 	list-style: none;
 	margin: 0; padding: 0;
 }

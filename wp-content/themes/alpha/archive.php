@@ -52,10 +52,15 @@ Template Name: Products Template
 		<section class="clearfix">
 			<?php 
 			$catId = get_query_var('cat');
-			$total = _get_category_count($catId);
+			$total = 0;
+			if(have_posts()): while(have_posts()): the_post();
+				$total++;
+			endwhile;
+			endif;
+			wp_reset_query();
+			
 			if($total <=3 ) $iFirstLastLine = 0;
 			else $iFirstLastLine = ((int)($total / 3))*3 + 1;
-			
 			?>
 			<?php $i = 1; ?>
 			<?php if(have_posts()): while(have_posts()): the_post();?>

@@ -12,7 +12,7 @@
 		<h1>
 			<img src="<?php bloginfo('template_directory')?>/images/icons/category-view-title.png" alt="Products" />
 			MTXT-LAPTOP
-			<a href="hoangnhien.net">&gt;&gt; xem tất cả</a>
+			<a href="<?php echo get_category_link(4);?>">&gt;&gt; xem tất cả</a>
 		</h1>
 		<section class="clearfix">
 			<?php 
@@ -57,7 +57,7 @@
 		<h1>
 			<img src="<?php bloginfo('template_directory')?>/images/icons/category-view-title.png" alt="Products" />
 			MÁY TÍNH ĐỂ BÀN
-			<a href="hoangnhien.net">&gt;&gt; xem tất cả</a>
+			<a href="<?php echo get_category_link(5);?>">&gt;&gt; xem tất cả</a>
 		</h1>
 		<section class="clearfix">
 			<?php 
@@ -103,7 +103,7 @@
 		<h1>
 			<img src="<?php bloginfo('template_directory')?>/images/icons/category-view-title.png" alt="Products" />
 			MÁY IN
-			<a href="<?php get_category_link(9); ?> ">&gt;&gt; xem tất cả</a>
+			<a href="<?php echo get_category_link(9); ?>">&gt;&gt; xem tất cả</a>
 		</h1>
 		<section class="clearfix">
 			<?php 

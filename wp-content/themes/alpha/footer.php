@@ -138,6 +138,18 @@
     	  return false;
     	};
     </script>
+    <!-- @author: HOANGNHIEN -->
+    <!-- script for top menu -->
+    <script>
+		$(document).ready(function(){
+			$('#site-navigation > ul > li').each(function(index, element){
+				$('a',this).hover(function(){
+					$('#site-navigation > ul > li').removeClass('active');
+					$(element).addClass('active');
+				});
+			});
+		});
+    </script>
     
     
 <?php wp_footer(); ?>
