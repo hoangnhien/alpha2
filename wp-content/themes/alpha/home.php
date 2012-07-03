@@ -15,32 +15,41 @@
 			<a href="hoangnhien.net">&gt;&gt; xem tất cả</a>
 		</h1>
 		<section class="clearfix">
-			<div class="hn-product-thumb clearfix last-line ">
-				<a href="hoangnhien.net" class="title">HP PAVILIO G4-1314TU (A9M54PA)</a>
-				<img src="<?php bloginfo('template_directory')?>/images/contents/product-thumbnail.jpg" alt="Products" />
+			<?php 
+			// get 3 newest post in MTXT-LAPTOP
+	
+			 $args = array(
+			    'numberposts'     => 3,
+			    'category'        => 4,
+			    'orderby'         => 'post_date',
+			    'order'           => 'DESC',
+			    'post_type'       => 'post',
+			    );
+		 	$myposts = get_posts( $args );
+		 	?>
+		 	<? $i = 0; ?>
+		 	<?php foreach( $myposts as $post ) :	setup_postdata($post); ?>
+		 	<?php $i++;?>
+			<div class="hn-product-thumb clearfix last-line <?php if($i==3) echo 'last-col'; ?>">
+				<a href="<?php the_permalink();?>" class="title"><?php the_title();?></a>
+				<?php  		
+				$thumb = "";	
+				$rows = get_field('images');
+				if($rows) {
+					foreach($rows as $row) {
+						$thumb = $row['image'];
+						break;
+					}
+				}
+				?>
+				<img src="<?php echo $thumb;?>" alt="Products" />
 				<p>
-				Intel® Core™ Core i5-2450M (2.5Ghz/3MB/1066Mhz) - HDD 640GB SATA - 2 GB RAM DDR3
+				<?php the_field('short_description');?>
 				</p>
-				<a href="hoangnhien.net" class="view-more">[chi tiết&hellip;]</a>
+				<a href="<?php the_permalink();?>" class="view-more">[chi tiết&hellip;]</a>
 			</div>
+			<?php endforeach;?>
 			
-			<div class="hn-product-thumb clearfix last-line ">
-				<a href="hoangnhien.net" class="title">HP PAVILIO G4-1314TU (A9M54PA)</a>
-				<img src="<?php bloginfo('template_directory')?>/images/contents/product-thumbnail.jpg" alt="Products" />
-				<p>
-				Intel® Core™ Core i5-2450M (2.5Ghz/3MB/1066Mhz) - HDD 640GB SATA - 2 GB RAM DDR3
-				</p>
-				<a href="hoangnhien.net" class="view-more">[chi tiết&hellip;]</a>
-			</div>
-			
-			<div class="hn-product-thumb clearfix last-line last-col">
-				<a href="hoangnhien.net" class="title">HP PAVILIO G4-1314TU (A9M54PA)</a>
-				<img src="<?php bloginfo('template_directory')?>/images/contents/product-thumbnail.jpg" alt="Products" />
-				<p>
-				Intel® Core™ Core i5-2450M (2.5Ghz/3MB/1066Mhz) - HDD 640GB SATA - 2 GB RAM DDR3
-				</p>
-				<a href="hoangnhien.net" class="view-more">[chi tiết&hellip;]</a>
-			</div>
 		</section>
 	</div>
 
@@ -51,32 +60,41 @@
 			<a href="hoangnhien.net">&gt;&gt; xem tất cả</a>
 		</h1>
 		<section class="clearfix">
-			<div class="hn-product-thumb clearfix last-line ">
-				<a href="hoangnhien.net" class="title">HP PAVILIO G4-1314TU (A9M54PA)</a>
-				<img src="<?php bloginfo('template_directory')?>/images/contents/product-thumbnail.jpg" alt="Products" />
+			<?php 
+			// get 3 newest post in MTXT-LAPTOP
+	
+			 $args = array(
+			    'numberposts'     => 3,
+			    'category'        => 5,
+			    'orderby'         => 'post_date',
+			    'order'           => 'DESC',
+			    'post_type'       => 'post',
+			    );
+		 	$myposts = get_posts( $args );
+		 	?>
+		 	<? $i = 0; ?>
+		 	<?php foreach( $myposts as $post ) :	setup_postdata($post); ?>
+		 	<?php $i++;?>
+			<div class="hn-product-thumb clearfix last-line <?php if($i==3) echo 'last-col'; ?>">
+				<a href="<?php the_permalink();?>" class="title"><?php the_title();?></a>
+				<?php  		
+				$thumb = "";	
+				$rows = get_field('images');
+				if($rows) {
+					foreach($rows as $row) {
+						$thumb = $row['image'];
+						break;
+					}
+				}
+				?>
+				<img src="<?php echo $thumb;?>" alt="Products" />
 				<p>
-				Intel® Core™ Core i5-2450M (2.5Ghz/3MB/1066Mhz) - HDD 640GB SATA - 2 GB RAM DDR3
+				<?php the_field('short_description');?>
 				</p>
-				<a href="hoangnhien.net" class="view-more">[chi tiết&hellip;]</a>
+				<a href="<?php the_permalink();?>" class="view-more">[chi tiết&hellip;]</a>
 			</div>
+			<?php endforeach;?>
 			
-			<div class="hn-product-thumb clearfix last-line ">
-				<a href="hoangnhien.net" class="title">HP PAVILIO G4-1314TU (A9M54PA)</a>
-				<img src="<?php bloginfo('template_directory')?>/images/contents/product-thumbnail.jpg" alt="Products" />
-				<p>
-				Intel® Core™ Core i5-2450M (2.5Ghz/3MB/1066Mhz) - HDD 640GB SATA - 2 GB RAM DDR3
-				</p>
-				<a href="hoangnhien.net" class="view-more">[chi tiết&hellip;]</a>
-			</div>
-			
-			<div class="hn-product-thumb clearfix last-line last-col">
-				<a href="hoangnhien.net" class="title">HP PAVILIO G4-1314TU (A9M54PA)</a>
-				<img src="<?php bloginfo('template_directory')?>/images/contents/product-thumbnail.jpg" alt="Products" />
-				<p>
-				Intel® Core™ Core i5-2450M (2.5Ghz/3MB/1066Mhz) - HDD 640GB SATA - 2 GB RAM DDR3
-				</p>
-				<a href="hoangnhien.net" class="view-more">[chi tiết&hellip;]</a>
-			</div>
 		</section>
 	</div>
 	
@@ -85,35 +103,44 @@
 		<h1>
 			<img src="<?php bloginfo('template_directory')?>/images/icons/category-view-title.png" alt="Products" />
 			MÁY IN
-			<a href="hoangnhien.net">&gt;&gt; xem tất cả</a>
+			<a href="<?php get_category_link(9); ?> ">&gt;&gt; xem tất cả</a>
 		</h1>
 		<section class="clearfix">
-			<div class="hn-product-thumb clearfix last-line ">
-				<a href="hoangnhien.net" class="title">HP PAVILIO G4-1314TU (A9M54PA)</a>
-				<img src="<?php bloginfo('template_directory')?>/images/contents/product-thumbnail.jpg" alt="Products" />
+			<?php 
+			// get 3 newest post in MTXT-LAPTOP
+	
+			 $args = array(
+			    'numberposts'     => 3,
+			    'category'        => 9,
+			    'orderby'         => 'post_date',
+			    'order'           => 'DESC',
+			    'post_type'       => 'post',
+			    );
+		 	$myposts = get_posts( $args );
+		 	?>
+		 	<? $i = 0; ?>
+		 	<?php foreach( $myposts as $post ) :	setup_postdata($post); ?>
+		 	<?php $i++;?>
+			<div class="hn-product-thumb clearfix last-line <?php if($i==3) echo 'last-col'; ?>">
+				<a href="<?php the_permalink();?>" class="title"><?php the_title();?></a>
+				<?php  		
+				$thumb = "";	
+				$rows = get_field('images');
+				if($rows) {
+					foreach($rows as $row) {
+						$thumb = $row['image'];
+						break;
+					}
+				}
+				?>
+				<img src="<?php echo $thumb;?>" alt="Products" />
 				<p>
-				Intel® Core™ Core i5-2450M (2.5Ghz/3MB/1066Mhz) - HDD 640GB SATA - 2 GB RAM DDR3
+				<?php the_field('short_description');?>
 				</p>
-				<a href="hoangnhien.net" class="view-more">[chi tiết&hellip;]</a>
+				<a href="<?php the_permalink();?>" class="view-more">[chi tiết&hellip;]</a>
 			</div>
+			<?php endforeach;?>
 			
-			<div class="hn-product-thumb clearfix last-line ">
-				<a href="hoangnhien.net" class="title">HP PAVILIO G4-1314TU (A9M54PA)</a>
-				<img src="<?php bloginfo('template_directory')?>/images/contents/product-thumbnail.jpg" alt="Products" />
-				<p>
-				Intel® Core™ Core i5-2450M (2.5Ghz/3MB/1066Mhz) - HDD 640GB SATA - 2 GB RAM DDR3
-				</p>
-				<a href="hoangnhien.net" class="view-more">[chi tiết&hellip;]</a>
-			</div>
-			
-			<div class="hn-product-thumb clearfix last-line last-col">
-				<a href="hoangnhien.net" class="title">HP PAVILIO G4-1314TU (A9M54PA)</a>
-				<img src="<?php bloginfo('template_directory')?>/images/contents/product-thumbnail.jpg" alt="Products" />
-				<p>
-				Intel® Core™ Core i5-2450M (2.5Ghz/3MB/1066Mhz) - HDD 640GB SATA - 2 GB RAM DDR3
-				</p>
-				<a href="hoangnhien.net" class="view-more">[chi tiết&hellip;]</a>
-			</div>
 		</section>
 	</div>
 	

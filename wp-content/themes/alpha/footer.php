@@ -118,8 +118,11 @@
 					$(element).find('>a').attr('href', 'javascript:void(0)');
 				}
 			});
+			
 			$('li.cat-item ul.children').hide();
 			$('li.cat-item').click(function(){
+				$('li.cat-item').removeClass('active');
+				$(this).addClass('active');
 				$('li.cat-item ul.children').hide();
 				$('ul.children', this).show();
 			});

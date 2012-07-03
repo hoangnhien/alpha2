@@ -185,3 +185,18 @@ $count +=$tax_term->count;
 return $count;
 }
 ?>
+<?php 
+function short_title() {
+	$mytitleorig = get_the_title();
+	$title = html_entity_decode($mytitleorig, ENT_QUOTES, "UTF-8");
+
+	$limit = "40";
+	$pad="...";
+
+	if(strlen($title) >= ($limit+3)) {
+		$title = substr($title, 0, $limit) . $pad;
+	}
+
+	echo $title;
+}
+?>

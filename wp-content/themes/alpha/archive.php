@@ -25,8 +25,14 @@ Template Name: Products Template
 		<div class="hn-category-title-block">
 			<div class="hn-category-title">
 				<img src="<?php bloginfo('template_directory')?>/images/icons/category-view-title.png" alt="Products" />
-				MTTX-LAPTOP
-				<a href="hoangnhien.net">&gt;&gt; xem tất cả</a>
+				<span>Trang chủ </span>&gt;
+				
+				<?php 
+					$catId = get_query_var('cat');
+					echo get_category_parents($catId, FALSE, ' &gt; ');
+				?>
+				
+				
 			</div>
 			<div class="hn-category-filter">
 				<nav class="pagination">

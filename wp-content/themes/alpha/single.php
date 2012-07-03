@@ -14,40 +14,7 @@ Template Name: Products Template
 <?php get_header(); ?>
 
 <div id="left-contain">
-	<ul id="sidebar">
-   <?php dynamic_sidebar( 'Right Sidebar' ); ?>
-</ul>
-
-	<div class="hn-widget">
-		<h1>
-			<img src="<?php bloginfo('template_directory')?>/images/icons/widget-title.png" alt="Products" />
-			DANH MỤC SẢN PHẨM
-		</h1>
-		<section>
-		<p>MTXT - Laptop</p>
-		<ul>
-			<li>Laptop HP</li>
-			<li>Laptop HP</li>
-			<li>Laptop HP</li>
-			<li>Laptop HP</li>
-		</ul>
-		</section>
-	</div>
-	<div class="hn-widget">
-		<h1>
-			<img src="<?php bloginfo('template_directory')?>/images/icons/widget-title.png" alt="Products" />
-			SẢN PHẨM NỔI BẬT
-		</h1>
-		<section>
-		<p>MTXT - Laptop</p>
-		<ul>
-			<li>Laptop HP</li>
-			<li>Laptop HP</li>
-			<li>Laptop HP</li>
-			<li>Laptop HP</li>
-		</ul>
-		</section>
-	</div>
+<?php get_sidebar(); ?>
 </div>
 
 <div id="right-contain">
