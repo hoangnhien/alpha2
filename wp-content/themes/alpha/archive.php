@@ -63,21 +63,22 @@ Template Name: Products Template
 				
 				<?php  		
 				$thumb = "";	
-				if(get_field('images'))
+				
+				$rows = get_field('images');
+				if($rows)
 				{
-					while(the_repeater_field('images'))
-					{
-						$thumb = get_sub_field('image');
+					foreach($rows as $row) {
+						$thumb = $row['image'];
 						break;
 					}
 				}
-					
+				
 				?>
-	 			<img src="<?php echo $thumb?>" alt="product-thumb" width="90" height="90" />
+	 			<img src="<?php echo $thumb;?>" alt="product-thumb" width="90" height="90" />
 				<p>
 				<?php the_field('short_description');?>
 				</p>
-				<a href="hoangnhien.net" class="view-more">[chi tiết&hellip;]</a>
+				<a href="<?php the_permalink();?>" class="view-more">[chi tiết&hellip;]</a>
 			</div>
 			<?php endwhile; ?>
 			<?php endif; ?>

@@ -33,16 +33,17 @@
  		<li>
 			<?php  		
 				$thumb = "";	
-				if(get_field('images'))
+				
+				$rows = get_field('images');
+				if($rows)
 				{
-					while(the_repeater_field('images'))
-					{
-						$thumb = get_sub_field('image');
+					foreach($rows as $row) {
+						$thumb = $row['image'];
 						break;
 					}
 				}
 				
-			?>
+				?>
  			<img src="<?php echo $thumb?>" alt="product-thumb" width="49" height="49" />
  			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
  		</li>
