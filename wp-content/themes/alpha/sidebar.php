@@ -3,7 +3,7 @@
 			<img src="<?php bloginfo('template_directory')?>/images/icons/widget-title.png" alt="Products" />
 			DANH MỤC SẢN PHẨM
 		</h1>
-		<section>
+		<section id="hn-category-list">
 			<?php dynamic_sidebar( 'Left Sidebar' ); ?>
 			
 		</section>
@@ -29,23 +29,23 @@
  
  
  <?php foreach( $myposts as $post ) :	setup_postdata($post); ?>
- 	<ul>
+ 	<ul class="hn-product-highlight">
  		<li>
 			<?php  		
 				$thumb = "";	
 				
 				$rows = get_field('images');
-				if($rows)
-				{
+				if($rows) {
 					foreach($rows as $row) {
 						$thumb = $row['image'];
 						break;
 					}
 				}
-				
-				?>
- 			<img src="<?php echo $thumb?>" alt="product-thumb" width="49" height="49" />
- 			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+			?>
+			<a href="<?php the_permalink(); ?>">
+	 			<img src="<?php echo $thumb?>" alt="product-thumb" width="49" height="49" />
+	 			<span><?php short_title(); ?></span>
+ 			</a>
  		</li>
  	</ul>
  		
