@@ -190,14 +190,33 @@ function short_title() {
 	$mytitleorig = get_the_title();
 	$title = html_entity_decode($mytitleorig, ENT_QUOTES, "UTF-8");
 
-	$limit = "40";
 	$pad="...";
-
+	$limit = "40";
 	if(strlen($title) >= ($limit+3)) {
 		$title = substr($title, 0, $limit) . $pad;
 	}
 
 	echo $title;
+}
+function thumb_title() {
+	$mytitleorig = get_the_title();
+	$title = html_entity_decode($mytitleorig, ENT_QUOTES, "UTF-8");
+	
+	$pad="...";
+	$limit = "60";
+	if(strlen($title) >= ($limit+3)) {
+		$title = substr($title, 0, $limit) . $pad;
+	}
+	
+	echo $title;
+}
+function short_content($content, $limit) {
+	$content = html_entity_decode($content, ENT_QUOTES, "UTF-8");
+	$pad = "...";
+	if(strlen($content) >= ($limit+3)) {
+		$content = substr($content,0, $limit) . $pad;
+	}
+	echo $content;	
 }
 ?>
 <?php 

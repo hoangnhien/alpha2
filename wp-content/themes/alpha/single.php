@@ -14,8 +14,9 @@ Template Name: Products Template
 <?php get_header(); ?>
 
 <div id="left-contain">
-	<?php get_sidebar(); ?>
+<?php get_sidebar(); ?>
 </div>
+
 <div id="right-contain">
 	<div id="top-banner">
 		<img src="<?php bloginfo('template_directory')?>/images/banner.jpg" alt="top banner" />

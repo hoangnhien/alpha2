@@ -25,8 +25,14 @@ Template Name: Products Template
 		<div class="hn-category-title-block">
 			<div class="hn-category-title">
 				<img src="<?php bloginfo('template_directory')?>/images/icons/category-view-title.png" alt="Products" />
-				MTTX-LAPTOP
-				<a href="hoangnhien.net">&gt;&gt; xem tất cả</a>
+				<span>Trang chủ </span>&gt;
+				
+				<?php 
+					$catId = get_query_var('cat');
+					echo get_category_parents($catId, FALSE, ' &gt; ');
+				?>
+				
+				
 			</div>
 			<div class="hn-category-filter">
 				<nav class="pagination">
@@ -46,27 +52,32 @@ Template Name: Products Template
 		<section class="clearfix">
 			<?php 
 			$catId = get_query_var('cat');
-			$total = _get_category_count($catId);
-			$iFirstLastLine = $total - (int)($total / 3);
-					
+			$total = 0;
+			if(have_posts()): while(have_posts()): the_post();
+				$total++;
+			endwhile;
+			endif;
+			wp_reset_query();
+			
+			if($total <=3 ) $iFirstLastLine = 0;
+			else $iFirstLastLine = ((int)($total / 3))*3 + 1;
 			?>
-			<?php $i = 0; ?>
+			<?php $i = 1; ?>
 			<?php if(have_posts()): while(have_posts()): the_post();?>
 			<?php 
 				$sPositionClass = "";
-				if(($i % 3) == 2) $sPositionClass = " last-col";
+				if(($i % 3) == 0) $sPositionClass = " last-col";
 				if($i >= $iFirstLastLine) $sPositionClass = $sPositionClass . " last-line";
 				$i++;
 			?>	
 				<div class="hn-product-thumb clearfix <?php echo $sPositionClass; ?> ">
-				<a href="<?php the_permalink();?>" class="title"><?php the_title();?></a>
+				<h1><a href="<?php the_permalink();?>" class="title"><?php short_title();?></a></h1>
 				
 				<?php  		
 				$thumb = "";	
 				
 				$rows = get_field('images');
-				if($rows)
-				{
+				if($rows) {
 					foreach($rows as $row) {
 						$thumb = $row['image'];
 						break;
@@ -74,11 +85,11 @@ Template Name: Products Template
 				}
 				
 				?>
-	 			<img src="<?php echo $thumb;?>" alt="product-thumb" width="90" height="90" />
-				<p>
-				<?php the_field('short_description');?>
-				</p>
-				<a href="<?php the_permalink();?>" class="view-more">[chi tiết&hellip;]</a>
+	 			<img src="<?php echo $thumb?>" alt="product-thumb" width="90" height="90" />
+				<div class="short-description">
+					<?php short_content(get_field('short_description'), 100);?>
+				</div>
+				<a href="hoangnhien.net" class="view-more">[chi tiết&hellip;]</a>
 			</div>
 			<?php endwhile; ?>
 			<?php endif; ?>

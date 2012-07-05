@@ -64,7 +64,7 @@
             </section>
         </footer><!-- end footer -->
     </div><!-- end #container -->
-    
+   
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
   <script src="<?php bloginfo('template_directory')?>/js/plugins.js"></script>
@@ -109,6 +109,13 @@
 			});
     	});
     </script>
+    <?php 
+	  $catId = get_query_var('cat');
+	  $oCurrCat = get_category($catId);
+	  $parrentCat = 0;
+	  if(isset($oCurrCat->category_parent)){ $parrentCat = $oCurrCat->category_parent;}
+	  
+	?>
     <!-- @author: HOANGNHIEN -->
     <!-- script for category widget -->
     <script>
@@ -120,15 +127,43 @@
 					$(element).find('>a').attr('href', 'javascript:void(0)');
 				}
 			});
+
 			
 			$('li.cat-item ul.children').hide();
+			/*
 			$('li.cat-item').click(function(){
 				$('li.cat-item').removeClass('active');
 				$(this).addClass('active');
 				$('li.cat-item ul.children').hide();
 				$('ul.children', this).show();
 			});
+			*/
+			$('li.cat-item').click(function(){
+					$('li.cat-item').removeClass('active');
+					$(this).addClass('active');
+					$('li.cat-item ul.children').hide();
+					$('ul.children', this).show();
+				
+			});
+			
+			$('li.cat-item-<?php echo catId;?>').addClass('active');
+			var parrentCat = <?php echo $parrentCat;?>;
+			if(parrentCat != 0){
+				$('li.cat-item-<?php echo $parrentCat;?>').addClass('active');
+				$('li.cat-item-<?php echo $parrentCat;?> ul.children').show();
+			} else {
+				$('li.cat-item-<?php echo $catId;?>').addClass('active');
+			}		
+			$('.hn-category-list ul li.active').click(function(){
+				$(this).removeClass('active');
+			});
+			
         });
+    </script>
+    <script>
+		$(document).ready(function(){
+			$('#hn-category-list').show();
+		});
     </script>
     <!-- @author: HOANGNHIEN -->
     <!-- script for go to top button -->
@@ -146,6 +181,8 @@
 				$('a',this).hover(function(){
 					$('#site-navigation > ul > li').removeClass('active');
 					$(element).addClass('active');
+				},function(){
+					$(element).removeClass('active');
 				});
 			});
 		});

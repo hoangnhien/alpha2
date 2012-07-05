@@ -3,8 +3,12 @@
 			<img src="<?php bloginfo('template_directory')?>/images/icons/widget-title.png" alt="Products" />
 			DANH MỤC SẢN PHẨM
 		</h1>
-		<section id="hn-category-list">
-			<?php dynamic_sidebar( 'Left Sidebar' ); ?>
+		<section id="hn-category-list" style="display:none">
+			<?php 
+			dynamic_sidebar( 'Left Sidebar' ); 
+
+	//wp_list_categories( );
+			?>
 			
 		</section>
 	</div>
@@ -53,4 +57,8 @@
 	<?php endforeach; ?>
 		</section>
 		
+	</div>
+	
+	<div class="hn-widget">
+	Quảng cáo
 	</div>

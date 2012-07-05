@@ -31,7 +31,7 @@
 		 	<?php foreach( $myposts as $post ) :	setup_postdata($post); ?>
 		 	<?php $i++;?>
 			<div class="hn-product-thumb clearfix last-line <?php if($i==3) echo 'last-col'; ?>">
-				<a href="<?php the_permalink();?>" class="title"><?php the_title();?></a>
+				<h1><a href="<?php the_permalink();?>" class="title"><?php thumb_title();?></a></h1>
 				<?php  		
 				$thumb = "";	
 				$rows = get_field('images');
@@ -43,9 +43,9 @@
 				}
 				?>
 				<img src="<?php echo $thumb;?>" alt="Products" />
-				<p>
-				<?php the_field('short_description');?>
-				</p>
+				<div class="short-description">
+					<?php short_content(get_field('short_description'), 100);?>
+				</div>
 				<a href="<?php the_permalink();?>" class="view-more">[chi tiết&hellip;]</a>
 			</div>
 			<?php endforeach;?>
@@ -76,7 +76,7 @@
 		 	<?php foreach( $myposts as $post ) :	setup_postdata($post); ?>
 		 	<?php $i++;?>
 			<div class="hn-product-thumb clearfix last-line <?php if($i==3) echo 'last-col'; ?>">
-				<a href="<?php the_permalink();?>" class="title"><?php the_title();?></a>
+				<h1><a href="<?php the_permalink();?>" class="title"><?php thumb_title();?></a></h1>
 				<?php  		
 				$thumb = "";	
 				$rows = get_field('images');
@@ -88,9 +88,9 @@
 				}
 				?>
 				<img src="<?php echo $thumb;?>" alt="Products" />
-				<p>
-				<?php the_field('short_description');?>
-				</p>
+				<div class="short-description">
+					<?php short_content(get_field('short_description'), 100);?>
+				</div>
 				<a href="<?php the_permalink();?>" class="view-more">[chi tiết&hellip;]</a>
 			</div>
 			<?php endforeach;?>
@@ -122,7 +122,7 @@
 		 	<?php foreach( $myposts as $post ) :	setup_postdata($post); ?>
 		 	<?php $i++;?>
 			<div class="hn-product-thumb clearfix last-line <?php if($i==3) echo 'last-col'; ?>">
-				<a href="<?php the_permalink();?>" class="title"><?php the_title();?></a>
+				<h1><a href="<?php the_permalink();?>" class="title"><?php thumb_title();?></a></h1>
 				<?php  		
 				$thumb = "";	
 				$rows = get_field('images');
@@ -134,9 +134,9 @@
 				}
 				?>
 				<img src="<?php echo $thumb;?>" alt="Products" />
-				<p>
-				<?php the_field('short_description');?>
-				</p>
+				<div class="short-description">
+					<?php short_content(get_field('short_description'), 100);?>
+				</div>
 				<a href="<?php the_permalink();?>" class="view-more">[chi tiết&hellip;]</a>
 			</div>
 			<?php endforeach;?>
