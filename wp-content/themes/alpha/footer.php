@@ -162,7 +162,7 @@
     </script>
     <script>
 		$(document).ready(function(){
-			$('#hn-category-list').show();
+			$('#hn-category-list').css('visibility','visible');
 		});
     </script>
     <!-- @author: HOANGNHIEN -->

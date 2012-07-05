@@ -71,7 +71,7 @@ Template Name: Products Template
 				$i++;
 			?>	
 				<div class="hn-product-thumb clearfix <?php echo $sPositionClass; ?> ">
-				<h1><a href="<?php the_permalink();?>" class="title"><?php short_title();?></a></h1>
+				<h1><a href="<?php the_permalink();?>" class="title"><?php thumb_title();?></a></h1>
 				
 				<?php  		
 				$thumb = "";	
